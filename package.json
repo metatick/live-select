@@ -1,6 +1,6 @@
 {
   "name": "live-select",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A mutationObserver powered querySelectorAll",
   "main": "live-select.js",
   "scripts": {
