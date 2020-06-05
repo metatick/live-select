@@ -5,6 +5,7 @@ const defaults = {
         childList: true,
         subtree: true
     },
+    timeout: 100,
     start: true
 };
 
@@ -42,7 +43,13 @@ class LiveSelect{
     }
 
     processElement(element, recursive = false){
-        if(element.matches(this.selector)){
+        if(element.matches && element.matches(this.selector)){
+            if(element.liveSelectProcessed){
+                return;
+            }
+            element.liveSelectProcessed = true;
+            //loop prevention
+            setTimeout(() => {delete element.liveSelectProcessed}, this.options.timeout);
             this.selectCallback(element);
         }
         if(recursive){
