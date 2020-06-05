@@ -13,7 +13,7 @@ class LiveSelect{
     constructor(selector, selectCallback, options={}) {
         this.selector = selector;
         this.selectCallback = selectCallback;
-        this.options = {...defaults, options};
+        this.options = {...defaults, ...options};
         if(this.options.start) {
             this.start();
         }
