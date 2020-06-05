@@ -1,0 +1,12 @@
+{
+  "name": "live-select",
+  "version": "1.0.0",
+  "description": "A mutationObserver powered querySelectorAll",
+  "main": "live-select.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Michael Thomas",
+  "license": "ISC"
+}
